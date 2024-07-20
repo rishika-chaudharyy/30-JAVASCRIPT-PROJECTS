@@ -2,7 +2,9 @@ let selectField = document.getElementById("selectField")
 let selectText = document.getElementById("selectText")
 let options = document.getElementsByClassName("options")
 let list = document.getElementById("list")
-let arrow= document.getElementById("arrow-icon")
+let arrow = document.getElementById("arrow-icon")
+
+
 selectField.onclick = function () {
     list.classList.toggle("hide");
     arrow.classList.toggle("rotate")

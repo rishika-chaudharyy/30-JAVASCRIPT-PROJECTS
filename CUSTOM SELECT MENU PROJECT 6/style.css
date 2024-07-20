@@ -17,12 +17,12 @@
     width: 350px;
 }
 
-#selectField{
+#selectField {
     width: 100%;
     padding: 15px 20px;
     margin-bottom: 30px;
     box-sizing: border-box;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -30,19 +30,19 @@
     cursor: pointer;
 }
 
-#selectField img{
-    width:12px;
+#selectField img {
+    width: 12px;
     transition: transform 0.5s;
 }
 
-#list{
+#list {
     width: 100%;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 6px;
     overflow: hidden;
 }
 
-.options{
+.options {
     padding: 15px 0 15px 70px;
     width: 100%;
     list-style: none;
@@ -51,21 +51,21 @@
     position: relative;
 }
 
-.options img{
-    width:25px;
+.options img {
+    width: 25px;
     position: absolute;
-    top:12px;
+    top: 12px;
     left: 25px;
 }
 
-.options:hover{
-    background: rgba(255,255,255,0.7);
+.options:hover {
+    background: rgba(255, 255, 255, 0.7);
 }
 
-.hide{
+.hide {
     visibility: hidden;
 }
 
-.rotate{
+.rotate {
     transform: rotate(180deg);
 }
