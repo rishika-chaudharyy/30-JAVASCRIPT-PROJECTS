@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>WORKING EMAIL SUBSCRIPTION FORM WITH GOOGLE SHEETS</title>
+</head>
+
+<body>
+    <div class="hero">
+        <h3>Coming soon!</h3>
+        <h1>Our brand new <br>Website is on It's way</h1>
+        <p>Subscribe for more details.</p>
+
+        <form name="submit-to-google-sheet">
+            <input name="email" type="email" placeholder="Email" required>
+            <button type="submit">Send</button>
+        </form>
+
+        <span id="thank-you-message"></span>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyCnZgWmkV3KUa0wsXsPNbfDONeyUWy3eZb17yX_6QI8TsY7aHuSJ5jC-N_-4Y_1Rwy/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const thankYouMessage = document.getElementById('thank-you-message')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    console.log('Success!', response)
+                    thankYouMessage.textContent = 'Thank you for subscribing!'
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
